@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function GradesCalculator() {
     const [grades, setGrades] = useState({
@@ -106,9 +104,9 @@ export default function GradesCalculator() {
                                     value={weights[item]}
                                     onChange={handleChangeWeight}
                                     className="w-16 p-1 text-center rounded-md bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-400 text-xs"
-                                    aria-label={`${item} Weight`}
+                                    max="100"
+                                    placeholder="%"
                                 />
-                                <span className="text-gray-400 text-xs">%</span>
                             </div>
                         </div>
                     ))}
@@ -120,9 +118,9 @@ export default function GradesCalculator() {
                     Calculate Total
                 </button>
                 {totalGrade !== null && (
-                    <h3 className="text-center text-xl mt-6">
-                        Your Total Grade is: <span className="font-bold text-green-400">{totalGrade}</span>
-                    </h3>
+                    <p className="text-center mt-4 text-gray-400 text-lg">
+                        Your Total Grade: <span className="text-green-400">{totalGrade}</span>
+                    </p>
                 )}
             </div>
         </div>
