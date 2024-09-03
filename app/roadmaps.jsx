@@ -1,6 +1,7 @@
 "use client";
-
+import Navbar from './components/Navbar';
 export default function Roadmaps() {
+  
   const sections = [
     {
       title: "HTML",
@@ -83,6 +84,8 @@ export default function Roadmaps() {
   ];
 
   return (
+    <>
+    <Navbar/>
     <div className="relative min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-3xl font-semibold mb-6 text-center text-gray-100">
         Frontend Development Roadmap
@@ -124,5 +127,6 @@ export default function Roadmaps() {
         <p className="text-3xl font-semibold mb-6 text-center text-gray-100">More roadmaps coming soon...</p>
       </div>
     </div>
+   </>
   );
 }

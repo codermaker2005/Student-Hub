@@ -1,10 +1,10 @@
 // pages/index.js
-import Home from "./home";  // Ensure this is the correct path
+import Roadmaps from "../roadmaps";  // Ensure this is the correct path
 
 export default function IndexPage() {
   return (
     <div>
-      <Home />
+      <Roadmaps />
     </div>
   );
 }

@@ -1,9 +1,13 @@
 "use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Navbar from './components/Navbar';
 
 const Home = () => {
   return (
+    <>
+    <Navbar />
     <div className="bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700 h-screen flex flex-col justify-center items-center text-center overflow-hidden">
@@ -19,7 +23,7 @@ const Home = () => {
             A comprehensive platform for internship opportunities, grades calculators, and more.
           </p>
           <Link
-            to="/grades-calculator"
+            href="/grades-calculator"
             className="bg-purple-800 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition"
           >
             Get Started
@@ -40,7 +44,7 @@ const Home = () => {
                 Discover exciting internship opportunities to kickstart your career.
               </p>
               <Link
-                to="/internships"
+                href="/internships"
                 className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
               >
                 Explore Internships
@@ -53,7 +57,7 @@ const Home = () => {
                 Keep track of your academic performance with our easy-to-use calculator.
               </p>
               <Link
-                to="/grades-calculator"
+                href="/grades-calculator"
                 className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
               >
                 Use Calculator
@@ -66,7 +70,7 @@ const Home = () => {
                 Access valuable resources and tips to enhance your student life.
               </p>
               <Link
-                to="/resources"
+                href="/roadmaps"
                 className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
               >
                 Discover More
@@ -86,7 +90,7 @@ const Home = () => {
             We’d love to hear from you. Reach out for any inquiries or support.
           </p>
           <Link
-            to="/contact"
+            href="/contact"
             className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition"
           >
             Contact Us
@@ -94,6 +98,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

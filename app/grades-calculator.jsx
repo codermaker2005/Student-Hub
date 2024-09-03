@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState } from "react";
+import Navbar from "./components/Navbar";
 
 export default function GradesCalculator() {
     const [grades, setGrades] = useState({
@@ -77,6 +80,8 @@ export default function GradesCalculator() {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="min-h-screen bg-gray-900 text-white p-6">
             <h1 className="text-3xl font-semibold mb-8 text-center text-gray-100">
                 Grade Calculator
@@ -88,7 +93,9 @@ export default function GradesCalculator() {
                 <div className="grid gap-6 mb-6">
                     {['midterm', 'final', 'project', 'assignment', 'part', 'attend'].map((item) => (
                         <div key={item} className="relative">
-                            <label className="block text-gray-300 mb-1 capitalize">{`${item} Grade`}</label>
+                            <label className="block text-gray-300 mb-1 capitalize">
+                                {item.charAt(0).toUpperCase() + item.slice(1)} Grade
+                            </label>
                             <input
                                 type="number"
                                 name={item}
@@ -124,5 +131,6 @@ export default function GradesCalculator() {
                 )}
             </div>
         </div>
+        </>
     );
 }

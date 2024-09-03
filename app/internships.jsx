@@ -1,6 +1,8 @@
+"use client";
+
 import { useEffect, useState } from 'react';
 import Papa from 'papaparse';
-
+import Navbar from './components/Navbar';
 export default function Internships() {
     const [internships, setInternships] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -33,6 +35,8 @@ export default function Internships() {
     }, []);
 
     return (
+        <>
+      <Navbar />
         <div className="min-h-screen bg-gray-900 text-white p-6">
             <h1 className="text-3xl font-semibold mb-8 text-center text-gray-100">
                 Internship Opportunities
@@ -67,5 +71,6 @@ export default function Internships() {
                 </div>
             )}
         </div>
+        </>
     );
 }
