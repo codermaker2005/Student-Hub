@@ -35,14 +35,14 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gray-900 text-white p-6">
+      <div className="min-h-screen bg-gray-900 text-white p-6 flex flex-col justify-center items-center pt-20">
         <h1 className="text-3xl font-semibold mb-8 text-center text-gray-100">
           Contact Us
         </h1>
-        <p className="text-center text-gray-400 mb-6">
+        <p className="text-center text-gray-400 mb-6 max-w-lg">
           If you have any inquiries, suggestions, or feedback, feel free to reach out to us. We look forward to hearing from you!
         </p>
-        <div className="max-w-xl mx-auto bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg">
+        <div className="w-full max-w-lg bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-gray-300 mb-2">
@@ -51,7 +51,7 @@ export default function Contact() {
                   type="text"
                   name="name"
                   required
-                  placeholder="Your Name"
+                  placeholder="Enter Your Name"
                   className="w-full p-2 rounded-md bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-400"
                 />
               </label>
@@ -63,7 +63,7 @@ export default function Contact() {
                   type="email"
                   name="email"
                   required
-                  placeholder="Your Email"
+                  placeholder="Enter Your Email"
                   className="w-full p-2 rounded-md bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-400"
                 />
               </label>
@@ -74,7 +74,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   required
-                  placeholder="Your Message"
+                  placeholder="Feel Free to Share Your Thoughts or Questions"
                   rows="4"
                   className="w-full p-2 rounded-md bg-gray-700 border border-gray-600 text-gray-200 placeholder-gray-400"
                 />
