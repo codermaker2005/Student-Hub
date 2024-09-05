@@ -2,12 +2,18 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Navbar from './components/Navbar';
 
 const Home = () => {
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById('features-section');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
-      <Navbar />
+      {/* Navbar Component */}
       <div className="bg-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700 h-screen flex flex-col justify-center items-center text-center overflow-hidden">
@@ -22,18 +28,18 @@ const Home = () => {
             <p className="text-lg md:text-xl mb-6">
               A comprehensive platform for internship opportunities, grades calculators, and more.
             </p>
-            <Link
-              href="/grades-calculator"
+            <button
+              onClick={scrollToFeatures}
               className="bg-purple-800 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition"
               aria-label="Get started with the grade calculator"
             >
               Get Started
-            </Link>
+            </button>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4">
+        <section id="features-section" className="py-16 px-4">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-semibold mb-12">
               What We Offer
